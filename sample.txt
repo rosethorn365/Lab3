@@ -1,0 +1,4 @@
+The objectives of the task are to:
+Install GitHub Apps
+Write the GitHub Workflow & 
+Understand and Implement Azure Pipelines
