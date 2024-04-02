@@ -26,25 +26,3 @@ jobs: # The jobs that run in this workflow
           issue-number: ${{ github.event.issue.number }} # The issue number is obtained from the context of the event that triggered the action.
           body: | # The body of the comment is a message thanking the user for opening the issue.
            Thanks for opening this issue! We'll take a look as soon as possible.
-
-# Comment on when an issue is closed
-
-
-# Comment on when an users opens the first pull request 
-
-name: Greet when a user opens first Pull request
-
-on:
-  pull_request:
-    types: opened
-
-jobs:
-  greeting:
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-    steps:
-      uses: actions/first.interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        pr-message: "Thank you for the first pull request!"
